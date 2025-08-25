@@ -1,5 +1,7 @@
-// Footer.tsx
+// Library
 import styled from "styled-components";
+
+/*-----------------------------------------------------------------------------------*/
 
 const FooterContainer = styled.footer`
   width: 100%;

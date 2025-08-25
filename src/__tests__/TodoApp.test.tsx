@@ -1,7 +1,14 @@
+// Library
 import { screen, fireEvent, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+
+// Component
 import { App } from "../App";
+
+// Utils
 import { renderWithClient } from "./test-utils";
+
+/*-----------------------------------------------------------------------------------*/
 
 describe("Todo App", () => {
     it("renders header and footer", () => {
