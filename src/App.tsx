@@ -1,5 +1,6 @@
 // Library
 import styled from "styled-components";
+import { Fragment } from "react";
 
 // Components
 import { List, Header, Footer } from './components'
@@ -7,7 +8,7 @@ import { List, Header, Footer } from './components'
 /*-----------------------------------------------------------------------------------*/
 
 export const App = () => (
-  <>
+  <Fragment>
     <Header />
     <AppContainer>
       <TopContainer>
@@ -21,7 +22,7 @@ export const App = () => (
       </Content>
     </AppContainer>
     <Footer />
-  </>
+  </Fragment>
 );
 
 const AppContainer = styled.div`
