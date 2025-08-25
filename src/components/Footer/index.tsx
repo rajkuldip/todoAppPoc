@@ -3,6 +3,10 @@ import styled from "styled-components";
 
 /*-----------------------------------------------------------------------------------*/
 
+export const Footer = () => {
+  return <FooterContainer>© {new Date().getFullYear()} Kuldip Raj</FooterContainer>;
+};
+
 const FooterContainer = styled.footer`
   width: 100%;
   padding: 1rem 2rem;
@@ -14,9 +18,3 @@ const FooterContainer = styled.footer`
   bottom: 0;
   left: 0;
 `;
-
-export const Footer = () => {
-  return <FooterContainer>© {new Date().getFullYear()} Kuldip Raj</FooterContainer>;
-};
-
-
