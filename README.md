@@ -1,4 +1,4 @@
-# Westpac Todo App (POC)
+# Todo App (POC)
 
 A simple **Todo App** built with **React**, **TypeScript**, **Vite**, **Styled-Components**, **React Query**, and **React Hook Form**. This is a **proof of concept (POC)** demonstrating modern React practices, including state management, API integration, form handling, and accessibility.
 
