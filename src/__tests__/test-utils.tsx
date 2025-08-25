@@ -1,4 +1,3 @@
-// src/__tests__/test-utils.tsx
 import type { ReactNode } from "react";
 import { render } from "@testing-library/react";
 import type { RenderOptions } from "@testing-library/react";
