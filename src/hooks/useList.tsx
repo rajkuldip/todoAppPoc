@@ -34,10 +34,10 @@ export const useList = (todoList: Todo[], setTodoList: Dispatch<SetStateAction<T
             localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data.todos));
             setList(data.todos);
         }
-    }, [data]);
+    }, [data, list]);
 
     const addTodo = (data: FormValues, reset: UseFormReset<FormValues>) => {
-        const listItem: Todo = { id: Date.now(), todo: data.task, completed: false };
+        const listItem: Todo = { id: todoList[todoList.length - 1]?.id + 1, todo: data.task, completed: false };
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify([...todoList, listItem]))
         reset();
         setTodoList([...todoList, listItem])

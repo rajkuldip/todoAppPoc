@@ -107,6 +107,7 @@ const TaskId = styled.span.withConfig({
 }) <{ completed: boolean }>`
   margin-right: 1rem;
   font-size: 1rem;
+  min-width: 100px;
   color: ${(props) => (props.completed ? "#868e96" : "#212529")};
 `;
 

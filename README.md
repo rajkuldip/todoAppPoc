@@ -1,69 +1,73 @@
-# React + TypeScript + Vite
+# Westpac Todo App (POC)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **Todo App** built with **React**, **TypeScript**, **Vite**, **Styled-Components**, **React Query**, and **React Hook Form**. This is a **proof of concept (POC)** demonstrating modern React practices, including state management, API integration, form handling, and accessibility.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Scripts](#scripts)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- Add, read, and remove todos.
+- Mark todos as **read/completed**.
+- Stores todos in **localStorage** for persistence.
+- Fetches initial tasks from a API using **React Query**.
+- Form validation using **React Hook Form**.
+- Styled with **Styled-Components**.
+- Responsive layout for desktop and mobile.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Tech Stack
+
+- **React** (v18+)
+- **TypeScript**
+- **Vite** (fast build and dev environment)
+- **Styled-Components** (CSS-in-JS)
+- **React Query** (data fetching & caching)
+- **React Hook Form** (form handling)
+- **Icons**: `react-icons` (FaEnvelope, FaEnvelopeOpen, FiTrash2)
+
+---
+
+## Getting Started
+
+```bash
+// Clone the repo
+git clone https://github.com/username/westpac-todo-app.git
+
+// Go to project folder
+cd westpac-todo-app
+
+// Install dependecies
+npm install
+
+// Start the dev server
+npm run dev
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Scripts
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Run Dev Server
+"dev": "vite"
+
+### Build
+"build": "tsc -b && vite build"
+
+### Check linting
+"lint": "eslint ."
+
+### Vite Preview
+"preview": "vite preview"
+
+### Run tests
+"test": "vitest"
