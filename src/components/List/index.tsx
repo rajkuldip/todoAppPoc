@@ -93,12 +93,12 @@ const ListItem = styled.li`
   justify-content: space-between;
   align-items: flex-start;
   padding: 0.75rem 1rem;
-  background: #f8f9fa;
+  background: ${({ theme: { colors } }) => colors.background};
   border-radius: 8px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 
   &:hover {
-    background: #f1f3f5;
+    background: ${({ theme: { colors } }) => colors.hoverBackground};
   }
 `;
 
@@ -108,7 +108,7 @@ const TaskId = styled.span.withConfig({
   margin-right: 1rem;
   font-size: 1rem;
   min-width: 100px;
-  color: ${(props) => (props.completed ? "#868e96" : "#212529")};
+  color: ${({ completed, theme: { colors } }) => (completed ? colors.completed : colors.text)};
 `;
 
 const TaskText = styled.span.withConfig({
@@ -117,7 +117,7 @@ const TaskText = styled.span.withConfig({
   flex: 1;
   margin-right: 1rem;
   font-size: 1rem;
-  color: ${(props) => (props.completed ? "#868e96" : "#212529")};
+  color: ${({ completed, theme: { colors } }) => (completed ? colors.completed : colors.text)};
   text-decoration: ${(props) => (props.completed ? "line-through" : "none")};
 `;
 
@@ -131,7 +131,7 @@ const IconButton = styled.button.withConfig({
 }) <{ completed?: boolean }>`
   border: none;
   background: transparent;
-  color: ${(props) => (props.completed ? "#868e96" : "#495057")};
+  color: ${({ completed, theme: { colors } }) => (completed ? colors.completed : colors.lightText)};
   cursor: pointer;
   font-size: 1.1rem;
   padding: 0.25rem;
@@ -140,7 +140,7 @@ const IconButton = styled.button.withConfig({
 
   &:hover {
     background: #e9ecef;
-    color: ${(props) => (props.completed ? "#868e96" : "#212529")};
+    color: ${({ completed, theme: { colors } }) => (completed ? colors.completed : colors.text)};
   }
 `;
 
@@ -169,7 +169,7 @@ const TaskInput = styled.input`
 
 const AddButton = styled.button`
   flex: 0 0 25%;
-  background-color: #1c7ed6;
+  background-color: ${({ theme: { colors } }) => colors.primaryButton};
   color: white;
   font-size: 1rem;
   font-weight: 500;
@@ -180,11 +180,11 @@ const AddButton = styled.button`
   transition: background 0.2s;
 
   &:hover:not(:disabled) {
-    background-color: #1971c2;
+    background-color: ${({ theme: { colors } }) => colors.primaryButtonHover};;
   }
 
   &:disabled {
-    background-color: #a5d8ff;
+    background-color: ${({ theme: { colors } }) => colors.primaryButtonDisabled};;
     cursor: not-allowed;
   }
 `;

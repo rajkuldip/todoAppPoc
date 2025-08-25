@@ -44,7 +44,7 @@ const Content = styled.div`
   flex-direction: column;
   margin: 1rem 0;
   width: 100%;
-  max-width: 1024px;
+  max-width: ${({ theme: { width } }) => width.content};
 `;
 
 const Title = styled.h1`
@@ -57,6 +57,6 @@ const StyledText = styled.p`
   font-size: 1.1em;
   line-height: 1.5;
   text-align: center;
-  max-width: 800px;
+  max-width: ${({ theme: { width } }) => width.subHeading};
   margin-bottom: 30px;
 `;

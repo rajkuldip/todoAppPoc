@@ -10,7 +10,7 @@ export const Footer = () => {
 const FooterContainer = styled.footer`
   width: 100%;
   padding: 1rem 2rem;
-  background-color: #f1f1f1;
+  background-color: ${({ theme: { colors } }) => colors.footerBackground};
   color: #555;
   text-align: center;
   font-size: 0.9rem;

@@ -10,7 +10,7 @@ export const Header = () => {
 const HeaderContainer = styled.header`
   width: 100%;
   padding: 1rem 2rem;
-  background-color: #4a90e2;
+  background-color: ${({ theme: { colors } }) => colors.headerBackground};
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
